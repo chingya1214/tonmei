@@ -1,0 +1,12 @@
+body{
+	font-family: "微軟正黑體";
+	background-image:url('/img/bg.png');background-repeat:repeat-x;;
+	/*background: linear-gradient(270deg, rgba(155, 212, 231, 1)35%, rgba(255, 255, 255, 1)60%);
+	background: -moz-linear-gradient(270deg, rgba(155, 212, 231, 1)35%, rgba(255, 255, 255, 1)60%);
+	background: -webkit-linear-gradient(270deg, rgba(155, 212, 231, 1)35%, rgba(255, 255, 255, 1)60%);
+	background: -o-linear-gradient(270deg, rgba(155, 212, 231, 1)35%, rgba(255, 255, 255, 1)60%);*/
+}
+
+.card{
+	margin: 0 0 10px 0;
+}
