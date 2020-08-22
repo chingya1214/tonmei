@@ -10,3 +10,28 @@ body{
 .card{
 	margin: 0 0 10px 0;
 }
+
+#gotop {
+	opacity: 0.7;
+	font-size: 30px;
+	position:fixed;
+	z-index:90;
+	right:30px;
+	bottom:31px;
+	display:none;
+	width:35px;
+	height:35px;
+	color:#fff;
+	background: #69b0f1;
+	line-height:50px;
+	border-radius:50%;
+	transition:all 0.5s;
+	text-align: center;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	-webkit-transition: 0.2s background linear;
+	-moz-transition: 0.2s background linear;
+	transition: 0.2s background linear;
+}
+#gotop:hover{
+   opacity: 1;
+}

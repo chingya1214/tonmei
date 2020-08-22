@@ -10,8 +10,8 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
 <link rel="stylesheet" href="/css/index.css">
-
 
 <style>
     body{
@@ -64,6 +64,25 @@
         background-color: rgba(163, 158, 158, 0.5) ;
     }
     
+    .swiper-container {
+        margin-top: 30px ;
+        width: 100%;
+        height: 180px;
+    }
+    .swiper-button-next{
+        right: 0px;
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
+        background-image: url(img/swiper-button-next.png)
+    }
+    .swiper-button-prev{
+        left: 0px;
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
+        background-image: url(img/swiper-button-prev.png)
+    }  
 
 </style>
 
@@ -138,21 +157,83 @@
                             <div class="col-5"><img src="/img/p1.jpg" alt=""></div>
                         </div>
                         
-                    
-                </div>
-            </div>
-    </div>
-</div>
-    <div class="footer">
-        <p style="text-align: center;">
-            電話：07-222-7275 &nbsp 傳真：07-223-4428 &nbsp  地址：高雄市三民區建國一路547號 &nbsp Mail：tonmei@so-net.net.tw <br>
-              營業時間：星期一~星期六   AM 9:00~PM 9:00  &nbsp&nbsp
-            Copyright © 東美銘牌工藝社
-        </p>
-    </div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" style="width: 80%;">
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                                <div class="swiper-slide"><img src="/img/1-01.jpg" width="100%" alt=""></div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+                        </div>
+                </div>
+        </div>
+    </div>
+<div class="footer">
+    <p style="text-align: center;">
+        電話：07-222-7275 &nbsp 傳真：07-223-4428 &nbsp  地址：高雄市三民區建國一路547號 &nbsp Mail：tonmei@so-net.net.tw <br>
+          營業時間：星期一~星期六   AM 9:00~PM 9:00  &nbsp&nbsp
+        Copyright © 東美銘牌工藝社
+    </p>
+    <a href="#" id="gotop">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
+
+
+<!--TOP-->
+<script type="text/javascript">
+$(function() {
+    /* 按下GoTop按鈕時的事件 */
+    $('#gotop').click(function(){
+        $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+        return false;
+    });
+
+    /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 200){
+            $('#gotop').fadeIn();
+        } else {
+            $('#gotop').fadeOut();
+        }
+    });
+});
+</script>
+
+<script>        
+    var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });        
+</script>
+
+
+
+
+
 </body>
 </html> 
